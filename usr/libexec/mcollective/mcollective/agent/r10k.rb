@@ -1,10 +1,6 @@
 module MCollective
   module Agent
-    # A basic agent for puppet to pull down the git repository from gerrit
-    # it will expect the git command but is very basic can be expanded on
-    # at a later date to be more cohesive with git as oppose inline with just
-    # the functionality that we want for the puppet modules
-    class Git<RPC::Agent
+    class R10k<RPC::Agent
 
       activate_when do
         File.exists?('/usr/bin/r10k')
