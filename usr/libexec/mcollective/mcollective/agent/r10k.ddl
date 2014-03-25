@@ -15,7 +15,7 @@ action "deploy", :description => "Use r10k to pull down puppet and hiera data" d
         :type         => :string,
         :validation   => '^.+$',
         :optional     => true,
-        :maxlength    => 30,
+        :maxlength    => 30
 
   input :env,
         :prompt       => "env",
@@ -23,21 +23,21 @@ action "deploy", :description => "Use r10k to pull down puppet and hiera data" d
         :type         => :string,
         :validation   => '^.+$',
         :optional     => true,
-        :maxlength    => 40,
+        :maxlength    => 40
 
-  input :config
+  input :config,
         :prompt       => "config",
         :description  => "A specific r10k configuration file to use",
         :type         => :string,
         :validation   => '^.+$',
         :optional     => true,
-        :maxlength    => 30,
+        :maxlength    => 30
 
-  input :puppet_file
+  input :puppet_file,
         :prompt       => "puppet_file",
         :description  => "Whether to read the puppetfile and pull down puppet modules",
         :type         => :bool,
         :validation   => '^.+$',
-        :optional     => true,
+        :optional     => true
 
 end

@@ -7,25 +7,25 @@ class MCollective::Application::R10k<MCollective::Application
           :description    => "User to pull down the repository as",
           :arguments      => ["--user USER", "-u USER"],
           :required       => false,
-          :type           => :string,
+          :type           => :string
 
   option  :env,
-          :description    => "environment to deploy i.e. branch name"
+          :description    => "environment to deploy i.e. branch name",
           :arguments      => ["--env env_name", "-e env_name"],
           :required       => false,
-          :type           => :string,
+          :type           => :string
 
   option  :puppet_file,
           :description    => "pull down modules from the puppetfile",
           :arguments      => ["-p", "--puppet_file"],
-          :type           => :bool,
           :required       => false,
+          :type           => :bool
 
   option  :config,
           :description    => "pass in the configuration file to use",
-          :arguments      => ["-c", "--config"]
+          :arguments      => ["-c", "--config"],
           :required       => false,
-          :type           => :string,
+          :type           => :string
 
   def post_option_parser(configuration)
     configuration[:command] = ARGV.shift if ARGV.size > 0
