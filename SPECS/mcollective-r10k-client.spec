@@ -19,7 +19,7 @@ Requires: mcollective-r10k-common >= 1.0.0
 Used for managing puppet cluster data from git with mcollective for r10k usage
 
 %prep
-%setup -q
+%setup -c
 
 %build
 

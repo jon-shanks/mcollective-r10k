@@ -20,7 +20,7 @@ Requires: rubygem-r10k >= 1.1.4
 Used for managing puppet cluster data from git with mcollective for r10k usage
 
 %prep
-%setup -q
+%setup -c
 
 %build
 
