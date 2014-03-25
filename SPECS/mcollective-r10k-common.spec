@@ -1,6 +1,6 @@
 %global agent_path '/usr/libexec/mcollective/mcollective/agent/'
 
-Name: mcollective-r10k-agent
+Name: mcollective-r10k-common
 Version: 1.0.0
 Release: 1
 License: Jon Shanks
@@ -12,7 +12,6 @@ BuildArch: noarch
 Group: System Tools
 Source0: %{name}-%{version}.tgz
 Requires: mcollective-common >= 2.4.1
-Requires: mcollective-r10k-common >= 1.0.0
 Requires: rubygem-r10k >= 1.1.4
 
 %description
@@ -27,13 +26,13 @@ Used for managing puppet cluster data from git with mcollective for r10k usage
 rm -rf %{buildroot}
 %{__install} -d -m0755 %{buildroot}%{agent_path}
 
-%{__install} -m0644 usr/libexec/mcollective/mcollective/agent/r10k.rb %{buildroot}%{agent_path}r10k.rb
+%{__install} -m0644 usr/libexec/mcollective/mcollective/agent/r10k.dll %{buildroot}%{agent_path}r10k.dll
 
 %files
 %defattr(-,root,root,-)
-/usr/libexec/mcollective/mcollective/agent/r10k.rb
+/usr/libexec/mcollective/mcollective/agent/r10k.dll
 
 
 %changelog
 * Tue Mar 25 2014 Jonathan Shanks <jon.shanks@gmail.com> - 1.0.0-1
-- Built Package mcollective-r10k-agent
+- Built Package mcollective-r10k-common
