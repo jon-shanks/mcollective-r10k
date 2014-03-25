@@ -1,4 +1,5 @@
 %global agent_path '/usr/libexec/mcollective/mcollective/agent/'
+%global ddl 'r10k.ddl'
 
 Summary: Mcollective common for r10k
 Name: mcollective-r10k-common
@@ -27,13 +28,15 @@ Used for managing puppet cluster data from git with mcollective for r10k usage
 rm -rf %{buildroot}
 %{__install} -d -m0755 %{buildroot}%{agent_path}
 
-%{__install} -m0644 usr/libexec/mcollective/mcollective/agent/r10k.dll %{buildroot}%{agent_path}r10k.dll
+%{__install} -m0644 usr/libexec/mcollective/mcollective/agent/%{ddl} %{buildroot}%{agent_path}%{ddl}
 
 %files
 %defattr(-,root,root,-)
-/usr/libexec/mcollective/mcollective/agent/r10k.dll
+/usr/libexec/mcollective/mcollective/agent/r10k.ddl
 
 
 %changelog
+* Tue Mar 25 2014 Jonathan Shanks <jon.shanks@gmail.com> - 1.0.0-2
+- Fixing up an error with the ddl name
 * Tue Mar 25 2014 Jonathan Shanks <jon.shanks@gmail.com> - 1.0.0-1
 - Built Package mcollective-r10k-common
