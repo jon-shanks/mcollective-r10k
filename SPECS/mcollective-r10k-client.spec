@@ -1,5 +1,6 @@
 %global app_path '/usr/libexec/mcollective/mcollective/application/'
 
+Summary: Mcollective client for r10k
 Name: mcollective-r10k-client
 Version: 1.0.0
 Release: 1

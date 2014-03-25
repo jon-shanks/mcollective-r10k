@@ -1,5 +1,6 @@
 %global agent_path '/usr/libexec/mcollective/mcollective/agent/'
 
+Summary: Mcollective agent for r10k
 Name: mcollective-r10k-agent
 Version: 1.0.0
 Release: 1
