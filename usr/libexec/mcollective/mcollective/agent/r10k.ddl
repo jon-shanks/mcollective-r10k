@@ -4,7 +4,7 @@ metadata    :name         => "r10k",
             :license      => "Jon Shanks",
             :version      => "1.0.0",
             :url          => "",
-            :timeout      => 30
+            :timeout      => 300
 
 requires    :mcollective  => "2.4.1"
 
