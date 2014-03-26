@@ -29,7 +29,7 @@ module MCollective
         end
 
         begin
-          Log.debug("#{sudo_command}")
+          Log.info("#{sudo_command}")
           reply[:status] = run("#{sudo_command}", :stdout => :out, :stderr => :err, :chomp => true, :cwd => datadir )
         rescue => e
           reply.fail(reply[:status] = "Error running sudo command: %s" % e.to_s)
