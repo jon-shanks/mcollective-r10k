@@ -39,7 +39,7 @@ class MCollective::Application::R10k<MCollective::Application
     r10k = rpcclient("r10k")
     opts = {}
 
-    %w{:user, :env, :puppet_file, :config}.each do |c|
+    [:user, :env, :puppet_file, :config].each do |c|
       if configuration.has_key?(c)
         opts[c] = configuration[c]
       end
