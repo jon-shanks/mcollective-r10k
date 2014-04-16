@@ -19,7 +19,7 @@ module MCollective
         pfile   = get_pfile
         sudo_command = "#{sudo} -u #{user} #{r10k} deploy environment"
         if env
-          sudo_command += " env"
+          sudo_command += " #{env}"
         end
         if conf
           sudo_command += " --config #{conf}"

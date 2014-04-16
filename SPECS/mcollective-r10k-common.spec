@@ -36,7 +36,5 @@ rm -rf %{buildroot}
 
 
 %changelog
-* Tue Mar 25 2014 Jonathan Shanks <jon.shanks@gmail.com> - 1.0.0-2
-- Fixing up an error with the ddl name
 * Tue Mar 25 2014 Jonathan Shanks <jon.shanks@gmail.com> - 1.0.0-1
 - Built Package mcollective-r10k-common
