@@ -36,7 +36,7 @@ action "deploy", :description => "Use r10k to pull down puppet and hiera data" d
   input :puppet_file,
         :prompt       => "puppet_file",
         :description  => "Whether to read the puppetfile and pull down puppet modules",
-        :type         => :bool,
+        :type         => :boolean,
         :validation   => '^.+$',
         :optional     => true
 
